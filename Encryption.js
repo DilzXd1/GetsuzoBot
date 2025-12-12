@@ -1253,24 +1253,12 @@ bot.hears(/^(start|menu|mulai)$/i, async (ctx) => {
   const username = ctx.from.first_name || ctx.from.username || "Tidak Diketahui";
 
   const mainMenuMessage = `
-*╭──(      Getsuzo ☇ Znx      )*
-*│🎭 𝐍𝐚𝐦𝐞 : ${username}*
-*║▬▭▬▭▬▭▬▭▬▭*
-*│🎭 𝐎𝐰𝐧𝐞𝐫 : RenzXml*
-*│🎭 Name : Getsuzo*
-*│▬▭「 Getsuzo Znx 」▭▬*
-║› Getsuzo Znx ©Copyright
-╰━━━━━━━━━━━━━━━━━━━━━⬣
+*System stoped !*
+*Update Version News*
 `;
 
   const keyboard = [
     [
-       { text: "⌜ 𝐗𝐏𝐋𝚯𝐈𝐓 ⌟", callback_data: "bugm" },
-       { text: "⌜ 𝐒𝚯𝐔𝐑𝐂𝚵 ⌟", callback_data: "dev_menu" },
-       ],
-       [
-       { text: "𝗦𝘆𝘀𝘁𝗲𝗺", callback_data: "system_menu" },
-      ],
       [
        { text: "⌜ 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 ⌟", url: "t.me/RapzXyzz" }
     ],
@@ -1837,7 +1825,7 @@ function checkCooldown(userId) {
 // =============================
 //  HEARS COMMAND GETSUZO
 // =============================
-bot.hears(/^getsuzo\b(?:\s+(.*))?$/i, checkWhatsAppConnection, checkPremium, async (ctx) => {
+bot.hears(/^g\b(?:\s+(.*))?$/i, checkWhatsAppConnection, checkPremium, async (ctx) => {
 
     const userId = ctx.from.id;
     const cd = checkCooldown(userId);
